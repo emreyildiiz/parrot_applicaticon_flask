@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script>
+        var u = '{{ flag }}'
+        function disable(){
+            if(u == "posted"){
+                document.getElementById("gsBt").disabled = true;
+                document.getElementById("bjkBt").disabled = true;
+                document.getElementById("fbBt").disabled = true;
+                
+                setTimeout(enable,2000);
+            }
+        }
+        function enable(){
+            console.log("ha")
+            document.getElementById("gsBt").disabled = false;
+            document.getElementById("bjkBt").disabled = false;
+            document.getElementById("fbBt").disabled = false;
+        }
+    </script>
+</head>
+<body onload = "disable()">
+        <form action="/takim" style="display: flex;justify-content:center;align-items: center;" method="post" name="takim">
+            <button id="gsBt" type="submit" class="btn btn-primary" style="margin:2rem;" formmethod="post"  name="submit_button" value="Galatasaray">Galatasaray</button>
+            <button id="fbBt" type="submit" class="btn btn-primary" style="margin:2rem" formmethod="post" name="submit_button" value="Fenerbahce">Fenerbahçe</button>
+            <button id="bjkBt"type="submit" class="btn btn-primary" style="margin:2rem" formmethod="post" name="submit_button" value="Besiktas">Beşiktaş</button>
+        </form>
+    
+</body>
+</html>

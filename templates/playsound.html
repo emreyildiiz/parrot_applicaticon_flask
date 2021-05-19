@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <meta http-equiv="refresh" content="2">
+    {%if value == "gs"%}
+        <p style="color:yellow;text-align:center;font-size:30px;">Galatasaray</p>
+        <body style="background-color:red;"></body>
+        <audio controls autoplay>
+            <source src="https://storage.soundoftext.com/a63f7b10-b898-11eb-94a3-5f80760f9038.mp3">
+        </audio>
+    {%elif value == "bjk"%}
+        <p style="color:white;font-size:30px;text-align:center">Beşiktaş</p>
+        <body style="background-color:black;"></body>
+        <audio controls autoplay>
+            <source src="https://storage.soundoftext.com/abde3b60-b898-11eb-94a3-5f80760f9038.mp3">
+        </audio>
+    {%elif value == "fb"%}
+        <p style="color:darkblue;font-size:30px;text-align:center">Fenerbahçe</p>
+        <body style="background-color:yellow;"></body>
+        <audio controls autoplay>
+            <source src="https://storage.soundoftext.com/9a5e8200-b096-11eb-94a3-5f80760f9038.mp3">
+        </audio>
+    {%else%}
+        <p>İSTEK BEKLENİYOR...</p>
+        <p>Galatasaray Sayısı:{{gs}}</p>
+        <p>Beşiktaş Sayısı:{{bjk}}</p>
+        <p>Fenarbahçe Sayısı:{{fb}}</p>
+    {%endif%}
+</body>
+</html>
